@@ -141,6 +141,9 @@ workbook = openpyxl.load_workbook(filename="plate.xlsx")
 
 # Select the worksheet (replace sheetname with the name of your worksheet)
 worksheet = workbook["Sheet1"]
+worksheet["A1"] = "Plate"
+worksheet["B1"] = "Time-in"
+worksheet["C1"] = "Time-out"
 
 # Add some data to the worksheet
 data = [response.json()[0]['lpr'], datetime.now()]
